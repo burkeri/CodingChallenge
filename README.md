@@ -1,3 +1,20 @@
+MERN stack application
+
+Boilerplte code that allows for the construction of a MERN spplication:
+
+backend package.json includes the following dependencies:
+- concurrently
+- nodemon
+- express
+- if-env
+
+frontend package.json includes the following dependencies:
+- react
+- react-dom
+- reac-scripts
+(these are specified in create react app)
+
+
 # Create React Express App
 
 ## About This Boilerplate

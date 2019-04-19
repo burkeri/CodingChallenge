@@ -1,3 +1,10 @@
+// give a short summary of the project itself
+// list the main technologies used
+// go through the process
+    // go to package.json -- which dependecnies are you using and why
+
+
+
 MERN stack application
 
 Boilerplte code that allows for the construction of a MERN spplication:
@@ -11,7 +18,7 @@ backend package.json includes the following dependencies:
 frontend package.json includes the following dependencies:
 - react
 - react-dom
-- reac-scripts
+- react-scripts
 (these are specified in create react app)
 
 

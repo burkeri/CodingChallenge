@@ -12,6 +12,19 @@ const MONGODB_URI =
 // start express app
 const app = express();
 
+// middleware ------------------
+
+// serve static assets
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+// bodyparser
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// -----------------------------
+
 // db connection
 mongoose
   .connect(MONGODB_URI, { useCreateIndex: true, useNewUrlParser: true })
@@ -25,27 +38,6 @@ app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
 
-
-
-
-
-// // start server
-// app.listen(PORT, function() {
-//   console.log(`🌎 ==> API server now on port ${PORT}!`);
-//   console.log(`localhost://${PORT}`);
-// });
-
-// const path = require("path");
-
-// const PORT = process.env.PORT || 3001;
-
-// // start espress app
-// const app = express();
-
-// // Serve up static assets
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-// }
 
 // // Send every request to the React app
 // // Define any API routes before this runs

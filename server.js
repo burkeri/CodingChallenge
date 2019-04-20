@@ -2,12 +2,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-// server port
-const PORT = process.env.PORT || 3001;
+// import files
+const routes = require("./routes");
 
 // mongodb setup
-const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost/codingChallenge";
+const MONGODB_URI = "mongodb://localhost/codingChallenge";
+
+// server port
+const PORT = process.env.PORT || 3001;
 
 // start express app
 const app = express();
@@ -25,6 +27,9 @@ app.use(express.json());
 
 // -----------------------------
 
+// routes
+app.use(routes);
+
 // db connection
 mongoose
   .connect(MONGODB_URI, { useCreateIndex: true, useNewUrlParser: true })
@@ -37,10 +42,3 @@ mongoose
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
-
-
-// // Send every request to the React app
-// // Define any API routes before this runs
-// app.get("*", function(req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });

@@ -6,14 +6,14 @@ const Schema = mongoose.Schema;
 
 // image schema
 const imageSchema = new Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    url: {
-        type: String,
-        required: true
-    }
+  name: {
+    type: String,
+    required: true
+  },
+  url: {
+    type: String,
+    required: true
+  }
 });
 
 // create model

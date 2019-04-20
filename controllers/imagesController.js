@@ -6,8 +6,7 @@ module.exports = {
   getImages: (req, res) => {
     Image.find()
       .then(img => {
-        res.send(img);
-        console.log(img);
+        res.json(img);
       })
       .catch(err => res.status(422).json(err));
   }

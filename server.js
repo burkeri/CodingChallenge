@@ -28,7 +28,7 @@ app.use(express.json());
 // -----------------------------
 
 // routes
-// app.use(routes);
+app.use(routes);
 
 // db connection
 mongoose

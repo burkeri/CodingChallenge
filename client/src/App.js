@@ -4,43 +4,49 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import files
 import API from "../src/utils/API";
+import "./App.css";
 
 // pages
-import Home from "./pages/Home";
-import NoMatch from "./pages/NoMatch";
+import NoMatch from "./pages/noMatch/NoMatch";
+
+// components
+import ImageCard from "./components/imageCard/ImageCard";
+import Image from "./components/Image/Image";
 
 class App extends Component {
-
   state = {
     images: []
-  }
-
-  getImages = () => {
-    API.getImages().then(res => {
-      this.setState(
-        {
-          images: res.data
-        }
-      )
-    })
-  }
+  };
 
   componentDidMount() {
     this.getImages();
   }
 
+  getImages = () => {
+    API.getImages().then(res => {
+      this.setState({
+        images: res.data
+      });
+    });
+  };
+
   render() {
     return (
       <Router>
         <Switch>
-          <Route 
+          {/* home render */}
+          <Route
             exact path="/"
             render={() => (
-              <Home
-                images={this.state.images}
-              />
+              <div className="container">
+                {this.state.images.map(img => (
+                  <ImageCard />
+                ))}
+              </div>
             )}
           />
+
+          {/* 404 render */}
           <Route component={NoMatch} />
         </Switch>
       </Router>

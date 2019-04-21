@@ -1,7 +1,7 @@
 // dependencies
 import React, { Component } from 'react';
 
-export class ImageCard extends Component {
+export class Image extends Component {
   render() {
     return (
       <img src={this.props.url} alt={this.props.name}/>
@@ -9,4 +9,4 @@ export class ImageCard extends Component {
   }
 }
 
-export default ImageCard;
+export default Image;

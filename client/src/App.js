@@ -16,10 +16,10 @@ class App extends Component {
   }
 
   getImages = () => {
-    API.getImages().then(img => {
+    API.getImages().then(res => {
       this.setState(
         {
-          images: img
+          images: res.data
         }
       )
     })
@@ -33,7 +33,14 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route 
+            exact path="/"
+            render={() => (
+              <Home
+                images={this.state.images}
+              />
+            )}
+          />
           <Route component={NoMatch} />
         </Switch>
       </Router>

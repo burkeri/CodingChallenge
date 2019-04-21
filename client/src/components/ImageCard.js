@@ -1,9 +1,12 @@
-import React from 'react'
+// dependencies
+import React, { Component } from 'react';
 
-export default function ImageCard() {
-  return (
-    <div>
-      Image cards will go here!
-    </div>
-  )
+export class ImageCard extends Component {
+  render() {
+    return (
+      <img src={this.props.url} alt={this.props.name}/>
+    )
+  }
 }
+
+export default ImageCard;

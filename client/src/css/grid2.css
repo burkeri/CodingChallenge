@@ -1,7 +1,7 @@
 /* row 3 */
 
 .item.hover#item10 {
-  background-color: red;
+  background-color: #D05D06;
   grid-column: 1 / 3;
   grid-row: 1 / 3;
   transition: all .65s ease;
@@ -9,7 +9,7 @@
 }
 
 .item.hover#item11 {
-  background-color: red;
+  background-color: #243E59;
   grid-column: 2 / 4;
   grid-row: 1 / 3;
   transition: all .65s ease;
@@ -17,7 +17,7 @@
 }
 
 .item.hover#item12 {
-  background-color: red;
+  background-color: #00C9C4;
   grid-column: 3 / 5;
   grid-row: 1 / 3;
   transition: all .65s ease;
@@ -25,7 +25,7 @@
 }
 
 .item.hover#item13 {
-  background-color: red;
+  background-color: #6D00F0  ;
   grid-column: 4 / 6;
   grid-row: 1 / 3;
   transition: all .65s ease;
@@ -33,7 +33,7 @@
 }
 
 .item.hover#item14 {
-  background-color: red;
+  background-color: #18C900;
   grid-column: 5 / spa;
   grid-row: 1 / 3;
   transition: all .65s ease;
@@ -43,7 +43,7 @@
 /* row 4 */
 
 .item.hover#item15 {
-  background-color: red;
+  background-color: #F00068;
   grid-column: 1 / 3;
   grid-row: 3 / 1;
   transition: all .65s ease;
@@ -51,7 +51,7 @@
 }
 
 .item.hover#item16 {
-  background-color: red;
+  background-color: #F06800;
   grid-column: 3 / 5;
   grid-row: 3 / 1;
   transition: all .65s ease;
@@ -59,7 +59,7 @@
 }
 
 .item.hover#item17 {
-  background-color: red;
+  background-color: #003561;
   grid-column: 4 / 6;
   grid-row: 3 / 1;
   transition: all .65s ease;
@@ -67,7 +67,7 @@
 }
 
 .item.hover#item18 {
-  background-color: red;
+  background-color: #3E004B;
   grid-column: 5 / spa;
   grid-row: 3 / 1;
   transition: all .65s ease;

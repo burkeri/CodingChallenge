@@ -107,6 +107,7 @@ class App extends Component {
                   <ImageCard
                     class={this.state.itemClass}
                     name={img.name}
+                    url={img.url}
                     handleHover={this.handleHover}
                     clicked={img.clicked}
                     id={`item${i++}`}
@@ -118,6 +119,7 @@ class App extends Component {
                   <ImageCard
                     class={this.state.itemClass}
                     name={img.name}
+                    url={img.url}
                     handleHover={this.handleHover}
                     clicked={img.clicked}
                     id={`item${j++}`}

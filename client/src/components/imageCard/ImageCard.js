@@ -1,6 +1,11 @@
+// dependencies
 import React, { Component } from "react";
 
+// import files
 import "../../App.css";
+
+// components
+import Image from "../Image/Image";
 
 export class ImageCard extends Component {
   state = {
@@ -84,7 +89,13 @@ export class ImageCard extends Component {
         className={this.state.itemClass}
         onMouseEnter={this.handleHover}
         id={this.props.id}
-      />
+      >
+        <Image
+          className={"marvel"}
+          name={this.props.name}
+          url={this.props.url}
+        />
+      </div>
     );
   }
 }

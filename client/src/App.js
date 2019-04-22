@@ -15,9 +15,7 @@ import ImageCard from "./components/imageCard/ImageCard";
 class App extends Component {
   state = {
     arr1: [],
-    arr2: [],
-    itemClass: "item",
-    hoverClass: "item hover"
+    arr2: []
   };
 
   componentDidMount() {
@@ -51,11 +49,9 @@ class App extends Component {
               <div className="container">
                 {this.state.arr1.map(img => (
                   <ImageCard
-                    class={this.state.itemClass}
                     name={img.name}
                     url={img.url}
                     handleHover={this.handleHover}
-                    clicked={img.clicked}
                     id={`item${i++}`}
                   />
                 ))}
@@ -63,11 +59,9 @@ class App extends Component {
               <div className="container">
                 {this.state.arr2.map(img => (
                   <ImageCard
-                    class={this.state.itemClass}
                     name={img.name}
                     url={img.url}
                     handleHover={this.handleHover}
-                    clicked={img.clicked}
                     id={`item${j++}`}
                   />
                 ))}

@@ -69,17 +69,26 @@ class App extends Component {
   if they do, set the clicked attribute to false
   */
 
-  changeClicked = name => {
-    this.state.arr1.map(img =>
-      img.name === name ? (img.clicked = true) : (img.clicked = false)
-    );
-    this.setState({ arr1: this.state.arr1 });
-    console.log(this.state.arr1);
-  };
+  // changeClicked = name => {
+  //   this.state.arr1.map(img =>
+  //     img.name === name ? (img.clicked = true) : (img.clicked = false)
+  //   );
+  //   this.state.arr2.map(img =>
+  //     img.name === name ? (img.clicked = true) : (img.clicked = false)
+  //   );
+  //   this.setState(
+  //     { 
+  //       arr1: this.state.arr1,
+  //       arr2: this.state.arr2
+  //     });
+  //     console.log(this.state.arr1);
+  //     console.log(this.state.arr2);
+      
+  // };
 
-  handleHover = name => {
-    this.changeClicked(name);
-  };
+  // handleHover = name => {
+  //   this.changeClicked(name);
+  // };
 
   render() {
     let i = 1;

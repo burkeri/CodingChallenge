@@ -26,14 +26,13 @@ class App extends Component {
 
   getImages = () => {
     API.getImages().then(res => {
-      let arr1 = res.data.slice(0,9);
-      let arr2 = res.data.slice(9,18);
-      
+      let arr1 = res.data.slice(0, 9);
+      let arr2 = res.data.slice(9, 18);
+
       this.setState({
         arr1: arr1,
-        arr2: arr2,
+        arr2: arr2
       });
-
     });
   };
 
@@ -46,14 +45,12 @@ class App extends Component {
   //   e.target.classList.remove("hover");
   // }
 
-
-
   // checkTopRow = () => {
   //   for(let i=0; i <= (this.state.images.length/2); i++) {
   //     if(!this.state.images[i].clicked) {
   //       this.state.images[i] = true;
   //       console.log("set true!");
-        
+
   //     }
   //     else {
   //       this.state.images[i] = false;
@@ -62,7 +59,6 @@ class App extends Component {
   //     }
   //   }
   // }
-
 
   /*
   onmouseover loop through the first half of the images array
@@ -73,25 +69,21 @@ class App extends Component {
   if they do, set the clicked attribute to false
   */
 
+  changeClicked = name => {
+    this.state.arr1.map(img =>
+      img.name === name ? (img.clicked = true) : (img.clicked = false)
+    );
+    this.setState({ arr1: this.state.arr1 });
+    console.log(this.state.arr1);
+  };
 
-
-   changeClicked = (name) => {
-      this.state.arr1.map(img => img.name === name ? img.clicked = true : img.clicked = false);
-      this.setState({ arr1: this.state.arr1 });
-      console.log(this.state.arr1);
-    }
-    
-
-
-  // handleHover = (name, clicked, e) => {
-  //   this.changeClicked(name);
-  //   // this.checkTopRow(clicked);
-  // }
+  handleHover = name => {
+    this.changeClicked(name);
+  };
 
   render() {
-
-    let i = 0;
-    let j = 9;
+    let i = 1;
+    let j = 10;
 
     return (
       <Router>
@@ -104,22 +96,26 @@ class App extends Component {
               <div className="container">
                 {this.state.arr1.map(img => (
                   <ImageCard
+                    class={this.state.itemClass}
                     name={img.name}
-                    changeClicked={this.changeClicked}
+                    handleHover={this.handleHover}
                     clicked={img.clicked}
                     id={`item${i++}`}
                   />
                 ))}
-
               </div>,
               <div className="container">
                 {this.state.arr2.map(img => (
-                  <ImageCard 
+                  <ImageCard
+                    class={this.state.itemClass}
                     name={img.name}
-                    id={j++} 
+                    handleHover={this.handleHover}
+                    clicked={img.clicked}
+                    id={`item${j++}`}
                   />
                 ))}
               </div>
+
             ]}
           />
 

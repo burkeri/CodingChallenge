@@ -16,15 +16,36 @@ export class ImageCard extends Component {
     e.target.classList.remove("hover");
   };
 
-  addClassCallback = (e, boolean) => {
-    if (boolean) {
-      console.log(e.target);
-    }
-  }
 
   onClick = (boolean) => {
     if (boolean) {
+    }
+  }
+
+  handleHover = (func, param, bool) => {
+    func(param);
+    if (bool) {
       this.card.classList.add("hover")
+    }
+  }
+  handleHover = () => {
+    let cards = document.getElementsByClassName(this.state.itemClass);
+
+    for (let i=0; i<cards.length; i++) {
+      let c = cards[0];
+      while(c) {
+        if(c.tagName === "DIV") {
+          c.classList.remove("hover");
+        }
+        c = c.nextSibling;
+      }
+      this.card.classList.add("hover");
+    }
+  }
+
+  componentDidMount() {
+    if (this.card.id === "item1") {
+      this.card.classList.add("hover");
     }
   }
 
@@ -34,9 +55,7 @@ export class ImageCard extends Component {
       <div
         ref={(div)=>{this.card = div}}
         className={this.state.itemClass} 
-        // onMouseLeave={this.removeClass}
-        onMouseOut={() => this.props.changeClicked(this.props.name)}
-        onClick={() => this.onClick(this.props.clicked)}
+        onMouseEnter={this.handleHover}
         id={this.props.id}
       />
     );

@@ -78,6 +78,7 @@ class App extends Component {
    changeClicked = (name) => {
       this.state.arr1.map(img => img.name === name ? img.clicked = true : img.clicked = false);
       this.setState({ arr1: this.state.arr1 });
+      console.log(this.state.arr1);
     }
     
 

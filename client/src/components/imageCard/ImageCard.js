@@ -9,22 +9,34 @@ export class ImageCard extends Component {
 
   addClass = e => {
     console.log(e.target);
-    e.target.classList.add("hover");
+    // e.target.classList.add("hover");
   };
+
   removeClass = e => {
     e.target.classList.remove("hover");
   };
 
+  addClassCallback = (e, boolean) => {
+    if (boolean) {
+      console.log(e.target);
+    }
+  }
+
+  onClick = (boolean) => {
+    if (boolean) {
+      this.card.classList.add("hover")
+    }
+  }
+
   render() {
 
-    function test() { if (this.props.clicked) {console.log("hello!")} };
-
     return (
-      <div 
+      <div
+        ref={(div)=>{this.card = div}}
         className={this.state.itemClass} 
         // onMouseLeave={this.removeClass}
-        onMouseEnter={() => this.props.changeClicked(this.props.name)}
-        onMouseCapture={test()}
+        onMouseOut={() => this.props.changeClicked(this.props.name)}
+        onClick={() => this.onClick(this.props.clicked)}
         id={this.props.id}
       />
     );

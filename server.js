@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 
 // mongodb setup
-const MONGODB_URI = "mongodb://localhost/codingChallenge";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/codingChallenge";
 
 // server port
 const PORT = process.env.PORT || 3001;

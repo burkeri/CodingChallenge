@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import files
 import API from "../src/utils/API";
-import "./css/index";
+import "./css";
 
 // pages
 import NoMatch from "./pages/noMatch/NoMatch";
@@ -35,60 +35,6 @@ class App extends Component {
       });
     });
   };
-
-  // addClass = (e) => {
-  //   console.log(e.target);
-
-  // }
-
-  // removeClass = (e) => {
-  //   e.target.classList.remove("hover");
-  // }
-
-  // checkTopRow = () => {
-  //   for(let i=0; i <= (this.state.images.length/2); i++) {
-  //     if(!this.state.images[i].clicked) {
-  //       this.state.images[i] = true;
-  //       console.log("set true!");
-
-  //     }
-  //     else {
-  //       this.state.images[i] = false;
-  //       console.log("set false!");
-
-  //     }
-  //   }
-  // }
-
-  /*
-  onmouseover loop through the first half of the images array
-  check if the one you are hovering over has a clicked attribute of false
-  if it does set it to true
-  now look through the entire half of that array again
-  check if any other elements have the clicked attribute set to true
-  if they do, set the clicked attribute to false
-  */
-
-  // changeClicked = name => {
-  //   this.state.arr1.map(img =>
-  //     img.name === name ? (img.clicked = true) : (img.clicked = false)
-  //   );
-  //   this.state.arr2.map(img =>
-  //     img.name === name ? (img.clicked = true) : (img.clicked = false)
-  //   );
-  //   this.setState(
-  //     { 
-  //       arr1: this.state.arr1,
-  //       arr2: this.state.arr2
-  //     });
-  //     console.log(this.state.arr1);
-  //     console.log(this.state.arr2);
-      
-  // };
-
-  // handleHover = name => {
-  //   this.changeClicked(name);
-  // };
 
   render() {
     let i = 1;
@@ -126,7 +72,6 @@ class App extends Component {
                   />
                 ))}
               </div>
-
             ]}
           />
 

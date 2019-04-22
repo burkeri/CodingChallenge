@@ -1,9 +1,6 @@
 // dependencies
 import React, { Component } from "react";
 
-// import files
-import "../../App.css";
-
 // components
 import Image from "../Image/Image";
 
@@ -41,7 +38,7 @@ export class ImageCard extends Component {
   };
 
   handleHover = () => {
-    switch(this.card.id){
+    switch (this.card.id) {
       case "item1":
       case "item2":
       case "item3":
@@ -67,9 +64,9 @@ export class ImageCard extends Component {
         break;
 
       default:
-      break;
+        break;
     }
-  }
+  };
 
   componentDidMount() {
     if (this.card.id === "item1") {

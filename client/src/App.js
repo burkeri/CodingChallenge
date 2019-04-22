@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import files
 import API from "../src/utils/API";
-import "./App.css";
+import "./css/index";
 
 // pages
 import NoMatch from "./pages/noMatch/NoMatch";

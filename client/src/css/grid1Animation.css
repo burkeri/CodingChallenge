@@ -1,17 +1,3 @@
-.container {
-  display: grid;
-  grid-template-columns:repeat(6, 1fr);
-  height: 50vh;
-}
-
-.item {
-  background-color: #eee;
-  border: #fff solid 1px;
-  float: right;
-}
-
-/* item hover specs */
-
 /* row 1 */
 
 .item.hover#item1 {

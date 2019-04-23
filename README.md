@@ -62,7 +62,7 @@ Watch a video of an existing application and copy its funtionality. Build the fo
 - React Router
     - Attaches routes to components.
 
-## Issues
+## Challenges
 
 - **Expanding Images:**
 I used CSSGrid to create a layout for the images. This was my first time using this layout system and I had some difficulty manipulating the grid with CSS animations given that only certain grid properties are animatable.

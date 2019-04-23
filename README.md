@@ -6,6 +6,13 @@ Coding Challenge is an Avengers-themed, MERN stack, single-page application mean
 
 Watch a video of an existing application and copy its funtionality. Build the following observable interactions under the following requirements:
 
+#### Requirements
+- Build a SPA App in the framework of your choice (Angular 2+, React, Vue or other – just no jQuery) 
+    - Bonus points for using flexbox and/or css grid for the layout.
+- Create an external data source to populate the items with whatever data you like
+- Load data via an AJAX call.
+- Focus on generating reusable components and keeping good app structure hygiene.
+
 #### Observable Interactions
 
 - Display 18 images in a grid.
@@ -18,19 +25,12 @@ Watch a video of an existing application and copy its funtionality. Build the fo
     - When the other elements move, they will slide in the direction that they have been moved.
 - When an image expands in the top 2 rows, the positioning of elements in the bottom 2 rows will not be affected and vice versa.
 
-#### Requirements
-- Build a SPA App in the framework of your choice (Angular 2+, React, Vue or other – just no jQuery) 
-    - Bonus points for using flexbox and/or css grid for the layout.
-- Create an external data source to populate the items with whatever data you like
-- Load data via an AJAX call.
-- Focus on generating reusable components and keeping good app structure hygiene.
-
 ## Technology Used
 
 ### Stack
 
 - MongoDB
-    - I evaluated the application and determined that the data/imaged did not require associations. Therefore, I decided to use a non-realtional database.
+    - I evaluated the application and determined that the data/images did not require associations. Therefore, I decided to use a non-realtional database.
 - Express
     - Express handles routing and making API calls on the back-end of Coding Challenge.
 - React
@@ -49,7 +49,7 @@ Watch a video of an existing application and copy its funtionality. Build the fo
 - Nodemon
     - Allows for hot reload.
 - If-Env
- - Runs 'npm start' in all environments.
+    - Runs 'npm start' in all environments.
 
 #### Front End
 
@@ -68,7 +68,10 @@ Watch a video of an existing application and copy its funtionality. Build the fo
 I used CSSGrid to create a layout for the images. This was my first time using this layout system and I had some difficulty manipulating the grid with CSS animations given that only certain grid properties are animatable.
 
 - **Moving Images:**
-I found it difficult to define the path on which an image moved after it expanded and had trouble moving the smaller images around the newly-expanded image. I would like to find a wau to maintain CSSGrid's 'auto-flow' property while animating these elements.
+I found it difficult to define the path on which an image moved after it expanded and had trouble moving the smaller images around the newly-expanded image. I am researching techniques to maintain the grid's 'auto-flow' property while animating these elements.
+
+- **DRY Code:**
+As I progress with this project, I would like to optimize my code to avoid repition.
 
 # **Conclusion**
 
@@ -76,4 +79,4 @@ I have always been enthralled by web development and, although I found this proj
 
 This exercise gave me the opprtunity to use CSSGrid for the first time and practice CSS animations. I chose to use CSS animations rather than implemeneting an outside package in order to hone my skills in this area.
 
-I spent 5 days working on the challenge and, going forward, I plan to keep working on this project until it matches the video in its entirety.
+I spent 5 days working on the challenge and I plan to keep working on this project until it matches the video in its entirety.

@@ -1,4 +1,6 @@
-# ![logo](assets/logo.png  "logo") **Coding Challenge**  
+# ![logo](assets/logo.png  "logo") **Coding Challenge**
+
+## Description
 
 Coding Challenge is an Avengers-themed, MERN stack, single-page application meant to replicate the functionality of a pre-existing application. When a user hovers over an image, the image expands, the background changes color, and smaller images move around the newly expanded image.
 

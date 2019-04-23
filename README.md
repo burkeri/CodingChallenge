@@ -7,6 +7,7 @@ Coding Challenge is an Avengers-themed, MERN stack, single-page application mean
 Watch a video of an existing application and copy its funtionality. Build the following observable interactions under the following requirements:
 
 #### Requirements
+
 - Build a SPA App in the framework of your choice (Angular 2+, React, Vue or other – just no jQuery) 
     - Bonus points for using flexbox and/or css grid for the layout.
 - Create an external data source to populate the items with whatever data you like
@@ -36,7 +37,7 @@ Watch a video of an existing application and copy its funtionality. Build the fo
 - React
     - Used to build front end of application.
 - Node
-    - Coding challenge uses a node server
+    - Coding challenge uses a node server.
 
 ### Dependencies
 
@@ -65,13 +66,13 @@ Watch a video of an existing application and copy its funtionality. Build the fo
 ## Challenges
 
 - **Expanding Images:**
-I used CSSGrid to create a layout for the images. This was my first time using this layout system and I had some difficulty manipulating the grid with CSS animations given that only certain grid properties are animatable.
+I used CSSGrid to create a layout for the images. This was my first time using this layout system and I had some difficulty manipulating the grid with CSS animations.
 
 - **Moving Images:**
 I found it difficult to define the path on which an image moved after it expanded and had trouble moving the smaller images around the newly-expanded image. I am researching techniques to maintain the grid's 'auto-flow' property while animating these elements.
 
 - **DRY Code:**
-As I progress with this project, I would like to optimize my code to avoid repition.
+As I progress with this project, I plane to optimize my code to avoid repition.
 
 # **Conclusion**
 

@@ -1,5 +1,4 @@
-/* image cards will scale up and move 5px down and to the right on hover*/
-
+/* image cards will scale up and move 10px down and to the right on hover */
 @keyframes grow {
   0% {
     transform: scale(1) translate(0px, 0px);
@@ -15,5 +14,18 @@
   100% {
     transform: scale(1) translate(0px, 0px);
     transform-origin: top left;
+  }
+}
+
+/* when image cards move they will shift 50px to the left */
+@keyframes shift {
+  0%{
+    transform: translate(0px, 0px);
+  }
+  50%{
+    transform: translate(-50px);
+  }
+  100%{
+    transform: translate(0px, 0px);
   }
 }

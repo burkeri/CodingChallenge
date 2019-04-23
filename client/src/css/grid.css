@@ -19,16 +19,3 @@ img {
   animation-name: shift;
   animation-duration: 1s;
 }
-
-@keyframes shift {
-  0%{
-    transform: translate(0px, 0px);
-  }
-  50%{
-    transform: translate(-50px);
-  }
-  100%{
-    transform: translate(0px, 0px);
-  }
-
-}

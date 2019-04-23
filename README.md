@@ -1,4 +1,4 @@
-# **Coding Challenge** ![logo](assets/logo.png  "logo") 
+# ![logo](assets/logo.png  "logo") **Coding Challenge**  
 
 Coding Challenge is an Avengers-themed, MERN stack, single-page application meant to replicate the functionality of a pre-existing application. When a user hovers over an image, the image expands, the background changes color, and smaller images move around the newly expanded image.
 
@@ -62,7 +62,7 @@ Watch a video of an existing application and copy its funtionality. Build the fo
 - React Router
     - Attaches routes to components.
 
-### Issues
+## Issues
 
 - **Expanding Images:**
 I used CSSGrid to create a layout for the images. This was my first time using this layout system and I had some difficulty manipulating the grid with CSS animations given that only certain grid properties are animatable.
@@ -70,7 +70,7 @@ I used CSSGrid to create a layout for the images. This was my first time using t
 - **Moving Images:**
 I found it difficult to define the path on which an image moved after it expanded and had trouble moving the smaller images around the newly-expanded image. I would like to find a wau to maintain CSSGrid's 'auto-flow' property while animating these elements.
 
-## **Conclusion**
+# **Conclusion**
 
 I have always been enthralled by web development and, although I found this project difficult, I also found it engaging and enlightening.
 

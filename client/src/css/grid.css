@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   height: 50vh;
-  grid-auto-flow: row;
+  grid-auto-flow: row dense;
   text-align: center;
 }
 
@@ -14,6 +14,8 @@ img {
 .item {
   background-color: #eee;
   border: #fff solid 1px;
-  float: right;
   overflow: hidden;
+  cursor: pointer;
+  animation-name: shift;
+  animation-duration: 1s;
 }

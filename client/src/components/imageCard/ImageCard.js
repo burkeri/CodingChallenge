@@ -9,6 +9,7 @@ export class ImageCard extends Component {
     itemClass: "item"
   };
 
+  // onmouseenter - image card will add class "hover", "hover" will be removed from siblings
   changeTopRow = () => {
     let cards = document.getElementsByClassName(this.state.itemClass);
 
@@ -23,6 +24,7 @@ export class ImageCard extends Component {
     this.card.classList.add("hover");
   };
 
+  // onmouseenter - image card will add class "hover", "hover" will be removed from siblings
   changeBottomRow = () => {
     let cards = document.getElementsByClassName(this.state.itemClass);
 
@@ -37,6 +39,7 @@ export class ImageCard extends Component {
     this.card.classList.add("hover");
   };
 
+  // specifies which function is applied to which collection of elements
   handleHover = () => {
     switch (this.card.id) {
       case "item1":
@@ -68,6 +71,7 @@ export class ImageCard extends Component {
     }
   };
 
+  // applies "hover" class to the first item in grid 1 and last item in grid 2
   componentDidMount() {
     if (this.card.id === "item1") {
       this.card.classList.add("hover");
@@ -88,7 +92,6 @@ export class ImageCard extends Component {
         id={this.props.id}
       >
         <Image
-          className={"marvel"}
           name={this.props.name}
           url={this.props.url}
         />

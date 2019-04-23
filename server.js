@@ -2,11 +2,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-// import files
+// import routes folder
 const routes = require("./routes");
 
 // mongodb setup
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/codingChallenge";
+const MONGODB_URI =
+  process.env.MONGODB_URI || "mongodb://localhost/codingChallenge";
 
 // server port
 const PORT = process.env.PORT || 3001;

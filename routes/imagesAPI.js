@@ -1,10 +1,10 @@
 // dependencies
 const router = require("express").Router();
 
-// import file
+// import images controller
 const imagesController = require("../controllers/imagesController");
 
-// get all images - route
+// get all images on route ".../images"
 router.route("/images").get(imagesController.getImages);
 
 module.exports = router;
